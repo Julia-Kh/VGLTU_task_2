@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+  <!-- Указание кодировки страницы -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Контакты</title>
+
+  <!-- Подключение внешнего файла стилей -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <style>
+  /* Основной стиль для тела страницы */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Стиль для входных данных (текстовые поля, селекторы и текстовые области) */
+  input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+  }
+
+  /* Стиль для кнопки отправки */
+  input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+  }
+
+  /* Стиль для кнопки отправки при наведении */
+  input[type=submit]:hover {
+      background-color: #45a049;
+  }
+
+  /* Оформление контейнера с контактами */
+  .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+  }
+
+  /* Стиль для столбцов в контейнере, расположенных рядом друг с другом */
+  .column {
+      float: left;
+      width: 40%;
+      margin-top: 6px;
+      margin-left: 20px;
+      padding: 20px;
+  }
+
+  /* Очистка обтекания после колонок */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+  /* Адаптивный стиль: при ширине экрана меньше 600px колонки становятся вертикальными */
+  @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+      }
+  }
+  </style>
+</head>
+<body>
+<!-- Основной блок сайта -->
+    <div id="basic">
+
+      <!-- Шапка сайта -->
+      <div id="head-site">
+          <!-- Логотип с ссылкой на главную страницу -->
+          <a href="index.html"><img src="images/logo_my.png" alt="Julia's Flowers" title="Julia's Flowers" /></a>
+          <!-- Контактный номер -->
+          <img src="images/phone.png" alt="+7 (3537) 25-60-60" title="+7 (3537) 25-60-60" class="telefon" />
+      </div>
+
+      <!-- Верхнее меню сайта -->
+       <div id="menu-top">
+       <div class="bg-1">
+           <!-- Список пунктов меню -->
+           <ul>
+           <li><a href="about_us.html">О нас</a></li>
+           <li><a href="сatalog.html">Каталог</a></li>
+           <li><a href="our_works.html">Наши работы</a></li>
+           <li><a href="news.html">Новости</a></li>
+           <li><a href="stock.html">Акции</a></li>
+           <li><a href="nashi-klienty.html">Наши клиенты</a></li>
+           <li class="none-bg"><a href="contacts.html">Контакты</a></li>
+           </ul>
+       </div>
+       <div class="bg-2"></div>
+       </div>
+
+       <!-- Контент страницы -->
+       <div class="container padding-class">
+        <!-- Заголовки и описание для страницы контактов -->
+        <div style="text-align:center">
+          <h1>Контакты</h1>
+          <h2>Связаться с нами</h2>
+          <p>Закажите букет или оставьте сообщение:</p>
+        </div>
+
+        <!-- Разделение на два столбца -->
+        <div class="row">
+          <!-- Столбец с картой -->
+          <div class="column">
+           <!-- Встраивание Яндекс.Карты с помощью скрипта -->
+           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af79fd7d8160b3337030f326811ad277d218074720a74c81ea4d5ef212eca7a94&amp;width=420&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+
+          <!-- Столбец с формой для связи -->
+          <div class="column">
+            <!-- Форма для отправки данных -->
+            <form action="/action_page.php">
+              <label for="fname">Ваше Имя</label>
+              <input type="text" id="fname" name="firstname" placeholder="Ваше имя..">
+              <label for="lname">Ваша Фамилия</label>
+              <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия..">
+              <label for="country">Ваша страна</label>
+              <select id="country" name="country">
+                <option value="australia">Россия</option>
+                <option value="canada">Беларусь</option>
+                <option value="usa">Китай</option>
+              </select>
+              <label for="subject">Сообщение</label>
+              <textarea id="subject" name="subject" placeholder="Напиши что-нибудь.." style="height:170px"></textarea>
+              <input type="submit" value="Отправить">
+            </form>
+          </div>
+        </div>
+        <p>Email: <a href="mailto:info@juliasflowers.com">info@juliasflowers.com</a></p>
+        <p>Email для заказов: <a href="mailto:orders@juliasflowers.com">orders@juliasflowers.com</a></p>
+        <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">Написать в WhatsApp</a></p>
+        <!-- Ссылка для возврата на главную страницу -->
+        <div><a href="index.html">Перейти на главную страницу</a></div>
+      </div>
+
+      <!-- Подвал -->
+      <div id="podval">
+          <div class="yellow"></div>
+          <div class="p1">ООО “Julia's Flowers” 2024<br/>
+          г. Санкт-Петербург, Дворцовая пл., 2</div>
+          <div class="p3"><img src="images/stat.png" alt="" title="" /></div>
+          <div class="p2">Создание сайта: студия <a href="#">«Julia's CodeCraft»</a></div>
+      </div>
+
+      <!-- Очистка обтекания -->
+      <div class="myclr"></div>
+    </div>
+</body>
+</html>
